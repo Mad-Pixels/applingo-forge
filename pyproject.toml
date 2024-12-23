@@ -1,21 +1,14 @@
 [tool.poetry]
-name = "my-project"
+name = "applingo-forge"
 version = "0.1.0"
-description = "Multi-lambda project with shared packages"
+description = "Lambda functions"
 authors = ["Your Name <your.email@example.com>"]
 packages = [
-    { include = "src/packages" }
+    { include = "src" }
 ]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-
-[tool.poetry.group.dev.dependencies]
-pytest = "^8.3.4"
-
-[tool.poetry.group.hello]
-optional = true
-[tool.poetry.group.hello.dependencies]
 requests = "^2.31.0"
 
 [build-system]

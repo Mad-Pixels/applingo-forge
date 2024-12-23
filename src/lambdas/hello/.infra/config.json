@@ -1,0 +1,22 @@
+{
+    "policy": {
+      "Version": "2012-10-17",
+      "Statement": [
+        {
+          "Effect": "Allow",
+          "Action": [
+            "s3:GetObject"
+          ],
+          "Resource": [
+            "${promts_bucket_arn}/*",
+            "${promts_bucket_arn}"
+          ]
+        }
+      ]
+    },
+    "memory_size": 128,
+    "timeout": 60,
+    "envs": {
+      "PROMTS_BUCKET": "${promts_bucket_name}"
+    }
+}
